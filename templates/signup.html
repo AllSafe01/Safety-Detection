@@ -1,0 +1,92 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='signin.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<body class="vh-100 text-white" style="background-image: linear-gradient(#000a, rgba(130, 115, 115, 0.667)),
+        url(/static/assets/img/safetyHelm.jpg); background-size: cover;">
+<div class="container text-white">
+
+  <form class="form-signin" method="POST" action="/signup">
+    <h2 class="form-signin-heading">Sign Up</h2>
+    {{ form.hidden_tag() }}
+    {{ wtf.form_field(form.username) }}
+    {{ wtf.form_field(form.email) }}
+    {{ wtf.form_field(form.password) }}
+    <button class="btn btn-lg btn-warning btn-block" type="submit">Sign Up</button>
+
+    <p class="text-white d-block">Already have an accoount?
+             <a href={{url_for('login')}} class="text-white text-decoration-none">Sign In</a>
+    </p>
+  </form>
+
+</div> <!-- /container -->
+</body>
+
+<style>
+  .vh-100 {
+    height: 100vh; /* Sets height to 100% of viewport height */
+  }
+
+  .text-white {
+    color: #fff; /* Sets text color to white */
+  }
+
+  .d-flex {
+    display: flex; /* Enables flexbox layout */
+  }
+
+  .justify-content-center {
+    justify-content: center; /* Centers content horizontally */
+  }
+
+  .align-items-center {
+    align-items: center; /* Centers content vertically */
+  }
+
+  .btn-outline {
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: #ffcb0f;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #ffcb0f;
+    --bs-btn-hover-border-color: #ffcb0f;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-gradient: none;
+    --bs-btn-border-radius: 100vh;
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 0.5rem;
+
+    .w-25 {
+    width: 25%; /* Sets width to 25% of parent element */
+  }
+
+      .w-50 {
+    width: 25%; /* Sets width to 25% of parent element */
+  }
+
+  .mb-3 {
+    margin-bottom: 1rem; /* Sets bottom margin to 1 rem */
+  }
+
+  .mt-4 {
+    margin-top: 1.5rem; /* Sets top margin to 1.5 rem */
+  }
+
+  .text-decoration-none {
+    text-decoration: none; /* Removes text decoration */
+  }
+</style>
+
+
+{% endblock %}
+

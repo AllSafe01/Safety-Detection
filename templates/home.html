@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="/static/assets/css/style.css">
+
+        <title>Welcoming Page</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg text-white bg-dark bg-opacity-50 fixed-top py-3" id="navbar">
+            <div class="container">
+                <a class="h2 m-0 fw-bold text-decoration-none logo" href="/home">AllSafe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="user_nafication.php">NEWS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href={{url_for('dashboard')}}>Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href={{url_for('logout')}}>Log Out</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav> <!--  -->
+        <header class="home vh-100 text-white d-flex justify-content-center align-items-center" style="background-image: linear-gradient(#000a, rgba(130, 115, 115, 0.667)),
+        url(/static/assets/img/img3.jpg); background-size: cover;" id="home">
+            <div class="container text-center d-flex flex-column gap-3 align-items-center">
+                <!-- <span class="h3">Welcome</span> -->
+                <h2 class="text-capitalize display-3 fw-bold">We Care About Your Safety</h2>
+                <p class="description">
+                    Our System makes sure Workers Wear their Protective Gear and work safely Using AI and latest ML
+                    Algorithms.
+                </p>
+                <a href="/index" class="btn btn-outline text-uppercase">Start Now</a>
+                <!-- ./project.php -->
+                <!-- http://127.0.0.1:5000/ -->
+            </div>
+        </header>
+        <!--  -->
+        <section class="about py-4" id="about">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="/static/assets/img/construction-worker-956495_1280.jpg"
+                            class="w-50 rounded-1 p-1 border border-1" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column gap-3">
+                        <h2><span class="fw-bold">About</span> Us</h2>
+                        <h3>
+                            Hello! <span class="text-main fw-bold">Dear, Employer.</span>
+                        </h3>
+                        <p>
+                            Many accidents occur at construction sites due to workers' negligence and
+                            failure to follow safety procedures, threatening people's lives. .
+                        </p>
+                        <p>
+                            The point of using the system is to reduce these accidents and save
+                            human lives. By making sure they wear their protective equipment.
+                            and Follow safety procedures
+                        </p>
+                        <p>
+                            Our system has been developed by an expert team deploying and using modern
+                            AI Algorithms, modern world now use AI in every field, it's time
+                            to use it to save lives.
+                        </p>
+
+                        <ul class="social-media list-unstyled d-flex gap-2">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-services bg-gray pt-5 pb-5" id="services">
+            <div class="service-header text-center pb-5">
+                <h2 class="service-header pt-0 mt-4">Services.</h2>
+                <div class="line bg-primary m-auto"></div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-4">
+                        <div class="item-card text-center shadow-lg">
+                            <div class="card-icon d-flex justify-content-center">
+                                <div class="icon rounded-circle">
+                                    <i class="fa fa-bolt fa-2x"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-capitalize my-4 fw-bolder">
+                                StartUP
+                            </h4>
+                            <h6>20$</h6>
+                            <p class="my-4 text-muted">
+                                suitable for startUps and small size area
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-card text-center shadow-lg">
+                            <div class="card-icon d-flex justify-content-center">
+                                <div class="icon rounded-circle">
+                                    <i class="fa fa-diamond fa-2x"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-capitalize my-4 fw-bolder">
+                                Complex
+                            </h4>
+                            <h6>60$</h6>
+                            <p class="my-3 mx-4 text-muted">
+                                Convenient for Large Enviroments and Companies with improved detection accuracy
+                                that handles more cameras with a laser alarm system.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-card text-center shadow-lg">
+                            <div class="card-icon d-flex justify-content-center">
+                                <div class="icon rounded-circle">
+                                    <i class="fa fa-star fa-2x"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-capitalize my-4 fw-bolder">
+                                MidSize
+                            </h4>
+                            <h6>40$</h6>
+                            <p class="my-3 mx-4 text-muted">
+                                suitable for MidSize Companies and Enviroments such as Construction Areas.
+                            </p>
+                        </div>
+                    </div>
+<!--                    fa fa-star fa-2x
+                                Convenient for Large Enviroments and Companies with improved detection accuracy
+                                that handles more cameras with a laser alarm system.
+      suitable for MidSize Companies and Enviroments such as Construction Areas.
+-->
+                </div>
+            </div>
+        </section>
+
+        <section class="contact bg-cWhite py-5" id="contact">
+            <div class="container py-4">
+                <div class="main-title text-center">
+                    <h2><span class="fw-bold">Contact</span> Us</h2>
+                    <p class="description">
+                        It is a long established fact that a reader will be of a page when
+                        established fact looking at its layout.
+                    </p>
+                </div>
+                <form class="mt-5">
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name.." name="userName" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email.." name="email" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="Your subject.." name="subject" />
+                        </div>
+                        <div class="col-md-12">
+                            <textarea name="message" class="form-control" placeholder="Your Message.."></textarea>
+                        </div>
+                        <button class="btn btn-main ms-auto p-1 fw-bold text-uppercase">
+                            send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+
+</html>

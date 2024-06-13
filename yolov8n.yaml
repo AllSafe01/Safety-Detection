@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Safe Worker', 'Unsafe Worker', 'Worker -only hat-', 'Worker -only vest-', 'hardhat', 'vest']
+
+roboflow:
+  workspace: ensam-melc0
+  project: ppe-detection-sk7bu
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ensam-melc0/ppe-detection-sk7bu/dataset/1

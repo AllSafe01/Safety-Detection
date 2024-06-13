@@ -1,0 +1,217 @@
+:root {
+  --color-main: #ffcb0f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav a.active {
+  color: var(--color-main) !important;
+  font-weight: 700;
+}
+
+.home {
+  background-image: linear-gradient(#000a, rgba(130, 115, 115, 0.667)),
+    url(./images/img3.jpg);
+  background-size: cover;
+}
+
+.description {
+  max-width: 500px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.logo {
+  color: white;
+}
+
+.logo:hover {
+  color: var(--color-main) !important;
+}
+
+.btn-outline {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #ffcb0f;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ffcb0f;
+  --bs-btn-hover-border-color: #ffcb0f;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-gradient: none;
+  --bs-btn-border-radius: 100vh;
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.5rem;
+}
+
+.btn-main {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--color-main);
+  --bs-btn-border-color: var(--color-main);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d3b03d;
+  --bs-btn-hover-border-color: #d3b03d;
+}
+
+/*  */
+/*  */
+
+.upload {
+  background-image: linear-gradient(#000a, rgba(130, 115, 115, 0.667)),
+    url(./images/safety-7189102_1280.jpg);
+  background-size: cover;
+}
+
+.upload div {
+  width: 50%;
+  height: 50%;
+  border: 1px solid;
+}
+
+/* signUP */
+.login {
+  background-image: linear-gradient(#000a, rgba(130, 115, 115, 0.667)),
+    url(./images/safety-7189102_1280.jpg);
+  background-size: cover;
+}
+
+/* .login div {
+    width: 50%;
+    height: 50%;
+} */
+
+.form-container {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+  border: 1px;
+}
+
+p a:hover {
+  text-decoration: underline !important;
+}
+
+/* contact */
+.bg-cWhite {
+  background-color: #eee;
+}
+
+contact .form-control {
+  border-width: 2px;
+  padding-block: 8px;
+}
+
+.contact .form-control:focus {
+  border-color: var(--color-main);
+  box-shadow: none;
+}
+
+.contact textarea.form-control {
+  min-height: 150px;
+  max-height: 300px;
+}
+
+/*  */
+/*  */
+
+.ourteam-header h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  position: relative;
+}
+
+.ourteam-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  height: 2px;
+  width: 210px;
+  transform: translateX(-50%);
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+}
+
+.single-team {
+  background-color: rgba(52, 52, 52, 0.8);
+  margin-bottom: 10px;
+}
+
+.img-area .social ul {
+  text-align: center;
+  position: relative;
+  top: 175px;
+}
+
+.img-area img {
+  transition: all 0.4s ease 0s;
+  width: 100%;
+}
+
+.img-area:hover img {
+  transform: scale(1.2);
+}
+
+.t-layer {
+  top: 20px;
+  left: 5px;
+  bottom: 4px;
+  right: 4px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  opacity: 1;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+  z-index: 99;
+}
+
+.single-team:hover .t-layer {
+  opacity: 1;
+  top: 5px;
+}
+
+.img-area .t-layer ul li a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.img-text {
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.item-card {
+  padding: 50px 5px;
+  background: #fff;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.item-card:hover .icon {
+  background-color: black;
+  color: white;
+}
+
+/*  */
+/* news style */
