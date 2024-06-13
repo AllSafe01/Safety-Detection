@@ -1,4 +1,5 @@
 *.html linguist-detectable=true
+*.html linguist-language=Html
 *.css linguist-detectable=true
 *.py linguist-language=Python
 *.pt linguist-language=Python
