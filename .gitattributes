@@ -6,6 +6,6 @@
 *.python linguist-detectable=true
 *.py linguist-detectable=true
 app.py linguist-language=Python
-home.html linguist-language=HTML
-index.html linguist-language=HTML
+templates/home.html linguist-language=HTML
+templates/index.html linguist-language=HTML
 *.js linguist-detectable=false
