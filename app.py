@@ -15,8 +15,7 @@ from flask_wtf import FlaskForm
 # from flask_wtf import wtforms
 from wtforms import Form, StringField, TextAreaField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import input_required, length, ValidationError, Email
-
-import email_validator
+from email_validator import validate_email
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
@@ -45,10 +44,6 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-def email_exists(form, field):
-    if User.query.filter_by(email=field.data).first():
-        raise ValidationError('Email address already registered')
-
 
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[input_required(), length(min=4, max=15)],)
@@ -57,9 +52,13 @@ class LoginForm(FlaskForm):
 
 
 class RegisterForm(FlaskForm):
-    email = StringField('email', validators=[input_required(), Email(message='Invalid Email'), length(max=50), email_exists])
-    username = StringField('username', validators=[input_required(), length(min=4, max=15)],)
-    password = PasswordField('password', validators=[input_required(), length(min=8, max=80)],)
+    email = StringField('email', validators=[input_required(), Email(message='Invalid Email'), length(max=50)])
+    username = StringField('username', validators=[input_required(), length(min=4, max=15)])
+    password = PasswordField('password', validators=[input_required(), length(min=8, max=80)])
+
+    def validate_email(self, field):
+        if User.query.filter_by(email=field.data).first():
+            raise ValidationError('Email address already registered')
 
 
 @app.route('/login', methods=['Get', 'Post'])
@@ -83,11 +82,7 @@ def login():
 def signup():
     form = RegisterForm()
     if form.validate_on_submit():
-        existing_user = User.query.filter_by(email=form.email.data).first()
-        if existing_user:
-            flash('Email address already registered')
-            return render_template('signup.html', form=form)
-
+        # No need to check for existing email here, it's already done in the form validation
         hashed_password = generate_password_hash(form.password.data, method='pbkdf2:sha256')
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
